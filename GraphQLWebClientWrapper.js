@@ -9,13 +9,18 @@ var styles = {
 export default class GraphQLWebClientWrapper extends React.Component {
   constructor(props) {
     super(props);
+    var endpoint = this.props.endpoint;
+    if (window && window.location.search) {
+      var m = window.location.search.match(/endpoint=(.+)/)[1];
+      if (m) { endpoint = m }
+    }
     this.state = {
-      endpoint: this.props.endpoint,
+      endpoint: endpoint,
       cannedQueries: [
         `{ __schema { root_fields { name, description } } }`,
         `{ __types { name, description} }`,
         `{ __types { name, description, fields { name, description } } }`,
-		`{ TodoUserClass{ objectId, name, lists:TodoItemListClass_owner { objectId, name, items:TodoItemClass_list { objectId, done, description } } } }`
+        `{ TodoUserClass{ objectId, name, lists:TodoItemListClass_owner { objectId, name, items:TodoItemClass_list { objectId, done, description } } } }`
       ]
     };
     this.state.defaultQuery = this.state.cannedQueries[0];
