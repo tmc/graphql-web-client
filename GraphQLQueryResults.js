@@ -5,8 +5,6 @@ var brace = require('brace');
 require('brace/mode/javascript');
 require('brace/theme/github');
 
-import styles from './styles';
-
 export default class GraphQLQueryResults extends React.Component {
   render() {
     return (
@@ -15,6 +13,7 @@ export default class GraphQLQueryResults extends React.Component {
           theme="github"
           showPrintMargin={false}
           showGutter={false}
+          width="100%"
           value={this.props.results}
           defaultValue={"no response recieved"}
           name="results"
