@@ -5,6 +5,7 @@
   "dependencies": {
     "react": "*",
     "react-ace": "git+https://github.com/tmc/react-ace.git",
+    "brace": "*",
     "babel-loader": "*",
     "webpack": "*",
     "react-hot-loader": "*",
