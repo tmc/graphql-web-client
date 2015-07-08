@@ -1,0 +1,5 @@
+{
+  "name": "GraphQL Web Client",
+  "description": "An simple web interface intented to run GraphQL queries interactively.",
+  "respository": "https://github.com/tmc/graphql-web-client"
+}
