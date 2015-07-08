@@ -1,15 +1,18 @@
 {
   "scripts": {
-    "start": "node _liveserver.js"
+    "start": "node _server.js",
+    "dev": "node _liveserver.js",
+    "postinstall": "make"
   },
   "dependencies": {
     "react": "*",
     "react-ace": "git+https://github.com/tmc/react-ace.git",
     "brace": "*",
-    "babel-loader": "*",
     "webpack": "*",
-    "react-hot-loader": "*",
+    "babel-loader": "*",
     "babel-runtime": "*",
-    "webpack-dev-server": "*"
+    "react-hot-loader": "*",
+    "webpack-dev-server": "*",
+    "express": "*"
   }
 }
