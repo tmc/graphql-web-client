@@ -2,7 +2,7 @@ var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
 var config = require('./webpack.hotreload.config');
 
-var port = process.env.ENV_VARIABLE || 3000;
+var port = process.env.PORT || 3000;
 new WebpackDevServer(webpack(config), {
   contentBase: "./dist",
   hot: true,
